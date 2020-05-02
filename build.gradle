@@ -5,12 +5,20 @@ plugins {
 group 'ru.netology'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+}
+
+test {
+    useJUnitPlatform()
 }
