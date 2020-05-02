@@ -39,7 +39,7 @@ public class AppOrderTest {
     }
 
     @Test
-    void shouldSubmitRequest() {
+    void shouldTest1() {
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Медведев Николай");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79251234122");
         form.findElement(By.cssSelector(".checkbox__box")).click();
@@ -50,7 +50,7 @@ public class AppOrderTest {
     }
 
     @Test
-    void shouldReturnErrorIfEmptyName() {
+    void shouldTest2() {
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79251234122");
         form.findElement(By.cssSelector(".checkbox__box")).click();
@@ -61,7 +61,7 @@ public class AppOrderTest {
     }
 
     @Test
-    void shouldReturnErrorIfNameIsInEnglish() {
+    void shouldTest3() {
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Medvedev Nikolay");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79251234122");
         form.findElement(By.cssSelector(".checkbox__box")).click();
