@@ -19,7 +19,7 @@ public class AppOrderTest {
         if (System.getProperty("os.name").contains("Linux")){
             System.setProperty("webdriver.chrome.driver", "./driver/linux/chromedriver");
         } else if (System.getProperty("os.name").contains("Windows")) {
-            System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", ".\\driver\\windows\\chromedriver.exe");
         }
         options = new ChromeOptions();
         options.addArguments("--headless");
