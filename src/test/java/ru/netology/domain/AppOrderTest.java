@@ -16,7 +16,7 @@ public class AppOrderTest {
 
     @BeforeAll
     static void setUpAll() {
-        if (System.getProperty("os.name").equals("Linux")){
+        if (System.getProperty("os.name").contains("Linux")){
             System.setProperty("webdriver.chrome.driver", "./driver/linux/chromedriver");
         } else if (System.getProperty("os.name").contains("Windows")) {
             System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
