@@ -10,7 +10,6 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-  - chmod +x /driver/linux/chromedriver
   - chmod +x gradlew
   - java -jar ./artifacts/app-order.jar &
 
